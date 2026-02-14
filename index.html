@@ -57,10 +57,31 @@
         }
 
         .heart-image {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             margin: 30px auto;
+            position: relative;
             animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .heart-image::before,
+        .heart-image::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 160px;
+            background: #d63447;
+            border-radius: 100px 100px 0 0;
+        }
+
+        .heart-image::before {
+            transform: rotate(-45deg);
+            left: -50px;
+        }
+
+        .heart-image::after {
+            transform: rotate(45deg);
+            right: -50px;
         }
 
         @keyframes heartbeat {
@@ -137,7 +158,7 @@
     <div class="container">
         <h1>Happy Valentine's Day ❤️</h1>
         <p>You make my life brighter every day.</p>
-        <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/2764.svg" alt="Heart" class="heart-image">
+        <div class="heart-image" role="img" aria-label="Heart"></div>
         <p class="signature">Forever yours,</p>
         <h3>[Your Name]</h3>
     </div>
