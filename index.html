@@ -109,6 +109,13 @@
             font-weight: normal;
         }
 
+        .name {
+            color: #d63447;
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-style: normal;
+        }
+
         .hearts {
             position: fixed;
             top: 0;
@@ -143,7 +150,7 @@
     </style>
 </head>
 <body>
-    <div class="hearts">
+    <div class="hearts" aria-hidden="true">
         <span class="heart" style="left: 10%; animation-delay: 0s;">❤️</span>
         <span class="heart" style="left: 20%; animation-delay: 2s;">💕</span>
         <span class="heart" style="left: 30%; animation-delay: 4s;">💖</span>
@@ -160,7 +167,7 @@
         <p>You make my life brighter every day.</p>
         <div class="heart-image" role="img" aria-label="Heart"></div>
         <p class="signature">Forever yours,</p>
-        <h3>[Your Name]</h3>
+        <p class="name">[Your Name]</p>
     </div>
 </body>
 </html>
