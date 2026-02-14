@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 50%, #ffd4e5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 105, 135, 0.3);
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #d63447;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(214, 52, 71, 0.2);
+        }
+
+        p {
+            color: #555;
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .heart-image {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            position: relative;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .heart-image::before,
+        .heart-image::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 160px;
+            background: #d63447;
+            border-radius: 100px 100px 0 0;
+        }
+
+        .heart-image::before {
+            transform: rotate(-45deg);
+            left: -50px;
+        }
+
+        .heart-image::after {
+            transform: rotate(45deg);
+            right: -50px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: #777;
+        }
+
+        h3 {
+            color: #d63447;
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .name {
+            color: #d63447;
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" aria-hidden="true">
+        <span class="heart" style="left: 10%; animation-delay: 0s;">❤️</span>
+        <span class="heart" style="left: 20%; animation-delay: 2s;">💕</span>
+        <span class="heart" style="left: 30%; animation-delay: 4s;">💖</span>
+        <span class="heart" style="left: 40%; animation-delay: 1s;">❤️</span>
+        <span class="heart" style="left: 50%; animation-delay: 3s;">💕</span>
+        <span class="heart" style="left: 60%; animation-delay: 5s;">💖</span>
+        <span class="heart" style="left: 70%; animation-delay: 2.5s;">❤️</span>
+        <span class="heart" style="left: 80%; animation-delay: 4.5s;">💕</span>
+        <span class="heart" style="left: 90%; animation-delay: 1.5s;">💖</span>
+    </div>
+
+    <div class="container">
+        <h1>Happy Valentine's Day ❤️</h1>
+        <p>You make my life brighter every day.</p>
+        <div class="heart-image" role="img" aria-label="Heart"></div>
+        <p class="signature">Forever yours,</p>
+        <p class="name">[Your Name]</p>
+    </div>
+</body>
+</html>
